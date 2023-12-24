@@ -1,33 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import citacoes from './data.js'
 import './App.css'
+import { useState } from 'react'
+import Citacao from './Components/Citacao.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [indice, setIndice] = useState(0)
+
+  const proxCitacao = () => {
+    setIndice((prevCitacao) => (prevCitacao + 1) % citacoes.length)
+  }
+
+  
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+     <p>
+      <Citacao texto={citacoes[indice].texto} autor={citacoes[indice].autor} />
       </p>
+      <div>
+      <button onClick={proxCitacao}>Próxima Citação</button>
+      </div>
     </>
   )
 }

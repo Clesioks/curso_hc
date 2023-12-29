@@ -1,10 +1,10 @@
 import Foto from "./Foto"
 
-const Fotolist = ({fotos}) => {
+const Fotolist = ({fotos, setFotoAmpliada}) => {
   return (
     <div className="album"> 
     {fotos.map((foto) => (
-        <Foto key={foto.id} dados={foto} />
+        <Foto key={foto.id} dados={foto} setFotoAmpliada={setFotoAmpliada} />
     ))}
     </div>
   )

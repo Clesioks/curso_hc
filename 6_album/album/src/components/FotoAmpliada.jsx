@@ -1,9 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 
-const FotoAmpliada = () => {
+const FotoAmpliada = ({foto, setFotoAmpliada}) => {
   return (
-    <div>FotoAmpliada</div>
+    <div className='foto-ampliada-backdrop'>
+      <div className="foto-ampliada-container">
+        <img src={foto.urls.regular} alt={foto.alt_description} />
+      </div>
+    </div>
   )
 }
 

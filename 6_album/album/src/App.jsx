@@ -11,6 +11,7 @@ function App() {
   const [query, setQuery] = useState("")
   const [category, setCategory] = useState("")
   const [fotos, setFotos] = useState([])
+  const [fotoAmpliada, setFotoAmpliada] = useState(null)
 
   const fetchData = async ({query, category}) => {
 
@@ -38,8 +39,8 @@ function App() {
     <>
     <div className='container'>
       <Searchbar />
-      <Fotolist fotos={fotos}/>
-      <FotoAmpliada />
+      <Fotolist fotos={fotos} setFotoAmpliada={setFotoAmpliada}/>
+      {fotoAmpliada && (<FotoAmpliada foto={fotoAmpliada} setFotoAmpliada={setFotoAmpliada} />)}
       </div>
     </>
     

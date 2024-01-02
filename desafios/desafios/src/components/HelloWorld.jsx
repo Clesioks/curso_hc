@@ -1,7 +1,7 @@
 
 const HelloWorld = () => {
   return (
-    <p>HelloWorld</p>
+    <p>Hello, World!</p>
   )
 }
 

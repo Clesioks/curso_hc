@@ -1,27 +1,24 @@
-import { useState, useEffect } from "react";
-
-import React from 'react'
+import {useState, useEffect} from 'react'
 
 const Relogio3 = () => {
 
-const [time, setTime] = useState(new Date())
+  const [relogio, setRelogio] = useState(new Date())
 
-useEffect(() => {
+  useEffect(() => {
 
-  const timer = setInterval(() => {
-    setTime(new Date())
-  }, 1000) 
+    const timer = setInterval(() => {
+      setRelogio(new Date())
+    }, 1000)
+    
+    return () => {
+      clearInterval(timer)
+    }
 
+
+  },[])
 
   return (
-    clearInterval(timer)
-  )
-
-}, [])
-
-
-  return (
-    <div>{time.toLocaleTimeString()}</div>
+    <div>Novo relógio 3 - {relogio.toLocaleTimeString()}</div>
   )
 }
 

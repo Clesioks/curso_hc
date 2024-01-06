@@ -14,6 +14,7 @@ import Relogio3 from './components/Relogio3'
 import TodoList from './components/TodoList'
 import TodoList2 from './components/TodoList2'
 import TodoList3 from './components/TodoList3'
+import Tela from './components/Tela'
 
 function App() {
 
@@ -48,9 +49,10 @@ function App() {
 
   return (
     <>
+    <h2>Largura da tela</h2>
+    <Tela />
         <h2>Lista de tarefas 3 </h2>
         <TodoList3 />
-
     <h2>Lista de tarefas 2 </h2>
     <TodoList2 />
     <h2>10 - Lista de tarefas</h2>

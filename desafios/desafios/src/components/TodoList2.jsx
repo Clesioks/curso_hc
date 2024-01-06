@@ -1,26 +1,35 @@
-import { useState } from "react"
-
+import {useState} from 'react'
 
 const TodoList2 = () => {
 
-    const [todos, setTodos] = useState([])
+    const [todo, setTodo] = useState([])
     const [newTodo, setNewTodo] = useState("")
+    const [busca, setBusca] = useState("")
 
-    const handleAddTodo = () => {
-        if (newTodo.trim() !== "") {
-            setTodos([...todos, {text: newTodo.trim()}])
+    const addTask = () => {
+
+        if(newTodo !== "") {
+            setTodo([...todo, {text: newTodo}])
             setNewTodo("")
         }
+
     }
 
   return (
     <>
-    <div>Lista de tarefas</div>
-    <input type="text" value={newTodo} onChange={(e) => setNewTodo(e.target.value)}/>
-    <button onClick={handleAddTodo}>Add Task</button>
+    <div>Nova lista de tarefas 2</div>
+
+    <input type='text' value={newTodo} onChange={(e) => setNewTodo(e.target.value)} />
+    <button onClick={addTask}>Add tarefa</button>
+    <p>------------------</p>
+    <input type='text' onChange={(e) => setBusca(e.target.value)}/>
     <ul>
-        {todos.map((todo, index) => (
-            <li key={index}>{todo.text}</li>
+        {todo
+        .filter((task) => task.text.includes(busca))
+        .map((tarefa, index) => (
+                <li key={index}>
+                    {tarefa.text}
+                </li>
         ))}
     </ul>
     </>

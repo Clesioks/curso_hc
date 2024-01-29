@@ -16,6 +16,7 @@ import TodoList2 from './components/TodoList2'
 import TodoList3 from './components/TodoList3'
 import Tela from './components/Tela'
 import Tela2 from './components/Tela2'
+import Formulário from './components/Formulário'
 
 function App() {
 
@@ -50,6 +51,8 @@ function App() {
 
   return (
     <>
+    <h2> Formulário Dinâmico</h2>
+    <Formulário />
     <h2>***************** Largura de tela 2 ******************</h2>
     <Tela2 />
     <h2>Largura da tela</h2>

@@ -1,7 +1,16 @@
 
-const ValidadeForm = () => {
+// eslint-disable-next-line react/prop-types
+const ValidadeForm = ({nome}) => {
   return (
-    <div>ValidadeForm</div>
+       <>
+
+        <div>Validação de formulário - {nome}</div>
+
+
+
+
+        </>
+
   )
 }
 

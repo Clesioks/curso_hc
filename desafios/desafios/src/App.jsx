@@ -18,6 +18,7 @@ import Tela from './components/Tela'
 import Tela2 from './components/Tela2'
 import Formulário from './components/Formulário'
 import Formulario2 from './components/Formulario2'
+import ValidadeForm from './components/ValidadeForm'
 
 function App() {
 
@@ -52,6 +53,8 @@ function App() {
 
   return (
     <>
+    <h2>3 - Validade Form</h2>
+    <ValidadeForm nome={"TiTi"} />
     <h2>Formulário 2 - envio para console</h2>
     <Formulario2 />
     <p></p>

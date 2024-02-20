@@ -19,6 +19,9 @@ import Tela2 from './components/Tela2'
 import Formulário from './components/Formulário'
 import Formulario2 from './components/Formulario2'
 import ValidadeForm from './components/ValidadeForm'
+import FormularioRegistro from './components/FormularioRegistro'
+import Estilos from './components/Estilos'
+import Externo from './components/Externo'
 
 function App() {
 
@@ -53,8 +56,14 @@ function App() {
 
   return (
     <>
+    <h2> Estilo Externo</h2>
+    <Externo />
+    <h2>Estilos</h2>
+    <Estilos />
     <h2>3 - Validade Form</h2>
     <ValidadeForm nome={"TiTi"} />
+    <h2>Formulário de registro</h2>
+    <FormularioRegistro />
     <h2>Formulário 2 - envio para console</h2>
     <Formulario2 />
     <p></p>

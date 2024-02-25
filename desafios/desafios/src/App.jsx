@@ -22,6 +22,8 @@ import ValidadeForm from './components/ValidadeForm'
 import FormularioRegistro from './components/FormularioRegistro'
 import Estilos from './components/Estilos'
 import Externo from './components/Externo'
+import DarkLight from './components/DarkLight'
+import StyledNew from './components/StyledNew'
 
 function App() {
 
@@ -56,6 +58,10 @@ function App() {
 
   return (
     <>
+    <h2>Styled Components</h2>
+    <StyledNew />
+    <h2>Tema Dark e Light </h2>
+    <DarkLight />
     <h2> Estilo Externo</h2>
     <Externo />
     <h2>Estilos</h2>

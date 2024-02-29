@@ -11,7 +11,7 @@ const Inicio = () => {
                 <li><Link to="/psd">PSD</Link></li>
                 <li><Link to="/videos">Videos</Link></li>
                 <li><Link to="/busca">Busca</Link></li>
-                <li><Link to="formulario">Formulário</Link></li>
+                <li><Link to="/formulario">Formulário</Link></li>
                
             </ul>
         </nav>

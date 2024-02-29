@@ -1,7 +1,10 @@
-import { useParams } from "react-router-dom"
+import { useParams, useSearchParams } from "react-router-dom"
 import Inicio from "../../components/Inicio"
 
 const Busca = () => {
+
+  const [searchParams] = useSearchParams()
+  const query = searchParams.get("query")
 
     const {title} = useParams()
 
@@ -10,7 +13,12 @@ const Busca = () => {
         
         <Inicio />
         
-        A busca realizada foi: {title}</div>
+        A busca realizada foi: {title}
+        
+        
+        O resultado da busca foi {query}
+        </div>
+
   )
 }
 

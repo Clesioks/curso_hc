@@ -8,6 +8,7 @@ import Videos from './pages/Videos/Videos'
 import Busca from './pages/Busca/Busca'
 import Error404 from './pages/PageNotFound/Error404'
 import Formulario from './components/Formulario'
+import SearchForm from './pages/Search/SearchForm'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path='/busca/:title' element={<Busca />} />
           <Route path='*' element={<Error404 />} />
           <Route path='/formulario' element={<Formulario />} />
+          <Route path='/search' element={<SearchForm />} />
 
           </Routes>
       </BrowserRouter>

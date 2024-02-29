@@ -1,5 +1,6 @@
 import Inicio from '../../components/Inicio'
 import { Link } from 'react-router-dom'
+import SearchForm from '../../pages/Search/SearchForm'
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
         </ul>
        </nav>
 
+        <SearchForm />
     </div>
   )
 }
